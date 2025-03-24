@@ -1,0 +1,37 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.grack:nanojson:1.1'
+    implementation 'org.jsoup:jsoup:1.9.2'
+    implementation 'org.mozilla:rhino:1.7.7.1'
+    implementation 'com.github.spotbugs:spotbugs-annotations:3.1.0'
+    implementation 'org.nibor.autolink:autolink:0.8.0'
+    implementation 'com.github.kil1s:OtherFeatures:086cad1042'
+    implementation 'com.github.kil1s:OtherUrl:71252c88a9'
+    implementation 'com.github.kil1s:OtherMap:9dcdd09379'
+    implementation 'com.github.kil1s:OtherSettings:3a3bf8b395'
+    implementation 'com.github.kil1s:OtherHttp:d0f0785083'
+    implementation 'com.github.kil1s:OtherParams:6a81484d97'
+
+    implementation files("../../OtherPipeExtractor/OtherPipeExtractor.jar")
+
+    testImplementation libs.junit
+
+    api libs.commons.math3
+
+    implementation libs.guava
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
