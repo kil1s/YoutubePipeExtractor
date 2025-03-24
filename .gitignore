@@ -2,11 +2,10 @@
 *.lipm
 build.sh
 .env
-lib/
-.gradle
+.gradle/
 build/
 .idea
-local.properties
+*.properties
 out/
 *.iml
 
@@ -15,11 +14,8 @@ gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+gradlew.bat
+gradlew
+gradle/
 
-# Cache of project
 .gradletasknamecache
-# Ignore Gradle project-specific cache directory
-.gradle
-
-# Ignore Gradle build output directory
-build
